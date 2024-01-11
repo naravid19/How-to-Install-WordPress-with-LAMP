@@ -80,3 +80,6 @@ Create the user for WordPress
     curl -s https://api.wordpress.org/secret-key/1.1/salt/
     sudo nano /var/www/wordpress/wp-config.php
 
+you can explicitly set the filesystem method to “direct”. Failure to set this with your current settings would result in WordPress prompting for FTP credentials when performing some actions.
+
+    define('FS_METHOD', 'direct');
